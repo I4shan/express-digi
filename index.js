@@ -22,10 +22,11 @@
 
 
 import express from 'express';
+import 'dotenv/config';
 
 const app = express()
 
-const port = 3010;
+const port = process.env.PORT || 3010;
 app.use(express.json());
 
 let teaData = [];
